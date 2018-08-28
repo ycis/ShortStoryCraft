@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Short Story Craft</title>
+    <!-- Animate CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN --->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>  
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- SweetAlert2 CDN --> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.11/dist/sweetalert2.all.min.js" integrity="sha256-aWXJZ/4kdONPAkoIYYyE6fmVw0gqPEbnk7nspLANguI=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="../js/adjList.js"></script>
+    <script type="text/javascript" src="../js/verbList.js"></script>
+    <script type="text/javascript" src="../js/names.js"></script>
+    <script type="text/javascript" src="../js/stories.js"></script>
+    <script type="text/javascript" src="../js/game.js"></script>
+    <link rel="stylesheet" href="../styles/game.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+
+</head>
+
+<body>
+  <div class="wrapper"><!--wrapper-->
+    <nav id="sidebar"><!--sidebar-->
+      <div class="sidebar-header p-2">
+          <div id="dismiss">
+              <i class="fas fa-arrow-circle-left ml-0"></i>   
+          </div>
+          <img src="../images/ssc-logo.jpg" width="200">
+      </div>
+      <ul class="list-unstyled components">
+        <li class="active">
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Join the fun!</a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li><a href="#">Compete and Create</a></li>
+              <li><a href="#">Watch and Vote</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Browse Previous Stories</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav><!--sidebar-->
+    <div id="content1" class=""><!-- Page Content  -->
+      <nav class="d-flex flex-row justify-content-between sign-in">
+          <button class="sign-in" id="sidebarCollapse" >
+              <div class="d-flex flex-row align-items-center">
+                  <div class="fas fa-align-left fa-lg"></div>
+                  <div class="ml-2 fa-md">Menu</div>
+              </div>
+          </button>
+          <div class="text-center align-self-center">Sign in to get in on the action!</div>
+          <button class="sign-in"  type="button" data-toggle="modal" data-target="#exampleModal">
+              <div class="d-flex flex-row align-items-center">
+                  <div>Sign </div>
+                  <div class="mx-1">in</div>
+                  <div class="fas fa-sign-in-alt fa-2x" style="color:white;"></div>
+              </div>
+          </button> 
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card">
+              <img class="card-img-top" src="../images/ssc-logo.jpg">
+              <div class="card-body">
+                <div class="card-title">
+                  <h5>Welcome to Short Story Craft</h5>
+                  <h6 class="card-subtitle text-muted mb-2">A fun community based atmosphere for sparking creativity</h6>
+                  <div class="card-text">
+                    When you're ready, click        
+                    <button class="sign-in rounded" type="button" data-toggle="modal" data-target="#loginModal">
+                      <div class="d-flex flex-row align-items-center">
+                          <div class="fa-md">Sign </div>
+                          <div class="mx-1 fa-md">in</div>
+                          <div class="fas fa-sign-in-alt fa-2x" style="color:white;"></div>
+                      </div>
+                    </button > 
+                     to create an account and get in on the fun.
+                     <a id="RunCard" href="#" class="btn btn-primary">Show Entry</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="snippetDisplay" class="col-lg-6">
+          </div> <!--demo   col-md-6-->
+        </div> <!--row-->
+      </div> <!--content > container-->
+    </div> <!--content-->
+  </div> <!--wrapper--->
+  <div class="overlay"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign in or Register/h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
