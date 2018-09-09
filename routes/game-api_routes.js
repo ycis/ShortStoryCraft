@@ -1,5 +1,4 @@
 var db = require("../models");
-
 module.exports = function(app) {
   // Get all games info
   app.get("/api/games", function(req, res) {

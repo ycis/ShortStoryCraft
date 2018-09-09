@@ -1,122 +1,35 @@
+{{> navBars this}}
+	<div class="text-white">
+    <div class="container">
+      <div class="row">
+        {{!-- {{> snipFormMainDemo}} --}}
+      </div> <!--row-->
+    </div> <!--content > container-->		
+	</div>
 
-<div id="content1" class=""><!-- Page Content  -->
-  <nav class="d-flex flex-row justify-content-between sign-in">
-    <button class="sign-in" id="sidebarCollapse" >
-      <div class="d-flex flex-row align-items-center">
-        <div class="fas fa-align-left fa-lg"></div>
-        <div class="ml-2 fa-md">Menu</div>
-      </div>
-    </button>
-    <div class="text-center align-self-center" >Sign in to get in on the action!</div>
-    <button class="sign-in" type="button" data-toggle="modal" data-target="#loginModal">
-      <div class="d-flex flex-row align-items-center">
-        <div>Sign </div>
-        <div class="mx-1">in</div>
-        <div class="fas fa-sign-in-alt fa-2x" style="color:white;"></div>
-      </div>
-    </button> 
-  </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="card">
-          <img class="card-img-top" src="../images/ssc-logo.jpg">
-          <div class="card-body">
-            <div class="card-title">
-              <h5>Welcome to Short Story Craft</h5>
-              <h6 class="card-subtitle text-muted mb-2">A fun community based atmosphere for sparking creativity</h6>
-              <div class="card-text">
-                When you're ready, click        
-                <button class="sign-in rounded" type="button" data-toggle="modal" data-target="#loginModal">
-                  <div class="d-flex flex-row align-items-center">
-                      <div class="fa-md">Sign </div>
-                      <div class="mx-1 fa-md">in</div>
-                      <div class="fas fa-sign-in-alt fa-2x" style="color:white;"></div>
-                  </div>
-                </button> 
-                  to create an account and get in on the fun.
-              </div>
+{{!-- <div class="col-lg-6">
+  <div class="card">
+    <img class="card-img-top" src="../images/ssc-logo.jpg">
+    <div class="card-body">
+      <div class="card-title">
+        <h5>Welcome to Short Story Craft</h5>
+        <h6 class="card-subtitle text-muted mb-2">A fun community based atmosphere for sparking creativity</h6>
+        <div class="card-text">
+          When you're ready, click        
+          <button class="nav-colors rounded signin" type="button">
+            <div class="d-flex flex-row align-items-center">
+                <div class="fa-md">Sign </div>
+                <div class="mx-1 fa-md">in</div>
+                <div class="fas fa-sign-in-alt fa-2x" style="color:white;"></div>
             </div>
-          </div>
+          </button> 
+            to create an account and get in on the fun.
         </div>
       </div>
-      <div id="snippetDisplay" class="col-lg-6">
-      </div> <!--demo   col-md-6-->
-    </div> <!--row-->
-  </div> <!--content > container-->
-</div> <!--content-->
-
-
-
-
-
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" id="exampleModalLabel">Login or Sign Up?</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body text-center d-flex flex-column">
-        <button id="signinbtn" class="btn btn-primary" type="button" data-toggle="modal" data-target="#signinModal" data-dismiss="modal">Sign In</button>
-        Or
-        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#signupModal" data-dismiss="modal">Register</button>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        {{!-- <button type="button" class="btn btn-primary">Save changes</button> --}}
-      </div>
     </div>
   </div>
-</div>
-
-
-<div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signinmodal" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" id="exampleModalLabel">Sign In</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div id="signinbody" class="modal-body">
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        {{!-- <button type="button" class="btn btn-primary">Save changes</button> --}}
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" id="exampleModalLabel">Register</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       I'm Register
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        {{!-- <button type="button" class="btn btn-primary">Save changes</button> --}}
-      </div>
-    </div>
-  </div>
-</div>
-
-    <!-- Our Custom js -->
-    <script type="text/javascript" src="../js/adjList.js"></script>
-    <script type="text/javascript" src="../js/verbList.js"></script>
-    <script type="text/javascript" src="../js/names.js"></script>
-    <script type="text/javascript" src="../js/stories.js"></script>
-    <script type="text/javascript" src="../js/game.js"></script>
+</div> --}}
+        
+<!-- Our Custom js -->
+<script type="text/javascript" src="../js/snipDemo.js"></script>
+<script type="text/javascript" src="../js/snippetEntry.js"></script>

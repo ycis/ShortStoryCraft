@@ -1,5 +1,4 @@
 var db = require("../models");
-
 module.exports = function(app) {
   // Get all Users
   app.get("/api/users", function(req, res) {
@@ -20,7 +19,7 @@ module.exports = function(app) {
   });
 
   // Get a user by email
-  app.get("/api/users/:email", function(req, res) {
+  app.get("/api/emails/:email", function(req, res) {
     db.User.findOne({
       where: {
         email: req.params.email
@@ -34,6 +33,18 @@ module.exports = function(app) {
   app.delete("/api/users/:id", function(req, res) {
     db.User.destroy({ where: { id: req.params.id } }).then(function(dbUser) {
       res.json(dbUser);
+    });
+  });
+  
+  // username check
+  app.get("/api/displaynames/:displayname", function(req, res) {
+    db.User.findOne({
+      attributes: ['displayname'],
+      where: {
+        displayname: req.params.displayname
+      }
+    }).then(function(user) {
+      res.json(user);
     });
   });
 };

@@ -7,25 +7,20 @@ module.exports = function (sequelize, DataTypes) {
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-
     firstname: {
       type: DataTypes.STRING,
       notEmpty: true
     },
-
     lastname: {
       type: DataTypes.STRING,
       notEmpty: true
     },
-
-    username: {
+    displayname: {
       type: DataTypes.TEXT
     },
-
     about: {
       type: DataTypes.TEXT
     },
-
     email: {
       type: DataTypes.STRING,
       validate: {

@@ -1,42 +1,45 @@
-
-<div id="content1" class=""><!-- Page Content  -->
-  <nav class="d-flex flex-row justify-content-between sign-in">
-    <button class="sign-in" id="sidebarCollapse" >
-      <div class="d-flex flex-row align-items-center">
-        <div class="fas fa-align-left fa-lg"></div>
-        <div class="ml-2 fa-md">Menu</div>
-      </div>
-    </button>
-    <button class="sign-in" data-toggle="modal" data-target=".bd-example-modal-sm">
-        <i class="fas fa-users-cog sign-in fa-2x" style="color:white;"></i>
-    </button> 
-  </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="jumbotron">
-          <h1 class="display-4">Pick Your Poison</h1>
-          <p class="lead">Decide whether you want to join and and compete or sit back and have an impact on the flow of the story by casting your votes on a game that's about to begin</p>
-          <hr class="my-4">
-          <p class="lead d-flex flex-row justify-content-between">
-            <a  id="joinIn" class="btn btn-primary btn-lg" href="#" role="button">Join In</a>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Cast Your Ballet</a>
-          </p>
-        </div>
-      </div>
-      <div id="snippetDisplay" class="col-lg-6">
-      </div> <!--demo   col-md-6-->
-    </div> <!--row-->
-  </div> <!--content > container-->
-</div> <!--content-->
-
-
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-       <a class="btn btn-secondary" href="/logout">Log Out?</a>
-    </div>
+{{> navBars this}}
+<h1 class="display-4 mx-2">Start a new story</h1>
+<div class="lead mx-2">Join a game that's waiting for players or create your own</div>
+<div class="d-flex flex-row border-bottom border-dark text-right">
+    <button class="btn btn-primary ml-auto m-2" type="button">Create a room</button>
+    <button class="btn btn-primary m-2" data-toggle="collapse" data-target="#demo">Collapsible</button>
+</div> 
+<div class="container">
+<div class="nav nav-lobby ">
+    <button class="nav-link active nav-tab-btn" data-toggle="tab" href="#tab-start">Pregame</button>
+    <button class="nav-link nav-tab-btn" data-toggle="tab" href="#tab-going">Active Stories</button>
+</div>
+<div class="tab-content">
+  <div id="tab-start" class="container tab-pane active">
+    {{> joinTable}}
+  </div>
+  <div id="tab-going" class="container tab-pane fade">
+    <h1 class="display-4 mx-2">Join a game in progress</h1>
+    <div class="lead mx-2">Interested in trying to drive a current sotry in a new direction?</div>
+    {{> joinTable}}
   </div>
 </div>
+</div>  
 
-    <script type="text/javascript" src="../js/game.js"></script>
+
+{{!-- 
+    <div class="tab-content">
+        <div id="tab-start" class="container tab-pane active">
+          <h1 class="display-4 mx-2">Start a new story</h1>
+          <div class="lead mx-2">Join a game that's waiting for players or create your own</div>
+          <div class="d-flex flex-row border-bottom border-dark text-right">
+              <button class="btn btn-primary ml-auto m-2" type="button">Create a room</button>
+              <button class="btn btn-primary m-2" data-toggle="collapse" data-target="#demo">Collapsible</button>
+          </div> 
+          <div id="demo" class="collapse">
+          Lorem ipsum dolor text....
+          </div>
+          {{> gameTable}}
+          </div>
+        <div id="tab-going" class="container tab-pane fade">
+          <h1 class="display-4 mx-2">Join a game in progress</h1>
+          <div class="lead mx-2">Interested in trying to drive a current sotry in a new direction?</div>
+          {{> joinTable}}
+          </div>
+    </div> --}}

@@ -1,5 +1,4 @@
 var db = require("../models");
-
 module.exports = function(app) {
   // Get all characters info
   app.get("/api/chars", function(req, res) {

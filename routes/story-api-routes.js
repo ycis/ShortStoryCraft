@@ -1,5 +1,4 @@
 var db = require("../models");
-
 module.exports = function(app) {
   // Get all Stories
   app.get("/api/stories", function(req, res) {

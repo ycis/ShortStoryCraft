@@ -1,5 +1,4 @@
 var db = require("../models");
-
 module.exports = function(app) {
   // Get all adjectives
   app.get("/api/adjectives", function(req, res) {

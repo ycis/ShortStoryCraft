@@ -1,0 +1,18 @@
+
+<form id="signin" class="form-signin" name="signin" action="/signin" method="post">
+    <div class="form-label-group">
+        <input tabindex="0" id="email" type="email" class="form-control" placeholder="Email address" name="email" required>
+        <label for="inputEmail">Email address</label>
+    </div>
+    <div class="form-label-group">
+        <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
+        <label for="inputPassword">Password</label>
+    </div>
+    <button class="btn m-auto btn-primary btn-block mb-5" value="Sign In" type="submit">Sign in</button>
+    <div id="login-errors">{{login_errors}}</div>
+    {{#if login_errors}}
+        <div class="d-flex flex-row text-left mt-3">
+        <div>Having some trouble? <a id="recover-pw" href='#'>Recover your password</a>.</div> 
+        </div>
+    {{/if}}
+</form>

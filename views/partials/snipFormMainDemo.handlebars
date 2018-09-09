@@ -1,0 +1,99 @@
+<div id="snippetDisplay" class="col-lg-6">
+    <div id="game-holder" class="border border-dark">
+        <div class="nav d-flex flex-row">
+            <button id="tab-button-input" class="nav-link nav-tab-btn active" data-toggle="tab" href="#tab-input">Your Entry</button>
+            <button class="nav-link nav-tab-btn" data-toggle="tab" href="#tab-story">Story So Far</button>
+            <button class="nav-link nav-tab-btn" data-toggle="tab" href="#tab-vote" hidden>Vote</button>
+        </div>
+        <div class="tab-content">
+            <div id="tab-input" class="container tab-pane game-tab-border active border board border-dark">
+                <div class="sc-row">
+                    <div class="sc-holder">
+                        <div id="sc-Character" class="segment-card">
+                            <div class="sc-setup sc-back stroke-text Characters">Characters</div>
+                            <div id="sc-Characters-front" class="sc-setup sc-front">
+                                <div class="sc-front-title">Characters</div>
+                                <div class="sc-front-item" data-alt-text="him, his, he" data-id="1">Steve</div>
+                                <div class="sc-front-item" data-alt-text="her, hers, she" data-id="2">Lori</div>
+                                <div class="sc-front-item" data-alt-text="her, hers, she" data-id="3">Joan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-holder">
+                        <div id="sc-Verb" class="segment-card">
+                            <div class="sc-setup sc-back stroke-text Verbs">Verbs</div>
+                            <div id="sc-Verbs-front" class="sc-setup sc-front">
+                                <div class="sc-front-title">Verbs</div>
+                                <div class="sc-front-item" data-alt-text="run, runs" data-id="1">run</div>
+                                <div class="sc-front-item" data-alt-text="jumped" data-id="2">jump</div>
+                                <div class="sc-front-item" data-alt-text="fell, fallen" data-id="3">fall</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-holder">
+                        <div id="sc-Adjective" class="segment-card">
+                        <div class="sc-setup sc-back stroke-text Adjectives">Adjectives</div>
+                            <div id="sc-Adjectives-front" class="sc-setup sc-front">
+                                <div class="sc-front-title">Adjectives</div>
+                                <div class="sc-front-item" data-alt-text="fabulously" data-id="1">fabulous</div>
+                                <div class="sc-front-item" data-alt-text="fantasticly" data-id="2">fantastic</div>
+                                <div class="sc-front-item" data-alt-text="frantically" data-id="3">frantic</div>
+                            </div>  
+                        </div>
+                    </div>
+                </div> <!--segment-cards-->
+                <div class="d-flex flex-row row justify-content-between">
+                    <div class="ml-1">
+                        Start Paragraph?
+                    </div>
+                    <div id="charcters-remaining" class="d-flex flex-row mr-1">
+                        <div id="segment-text-rem-demo" class="mr-1">250</div>
+                        <div>Characters Remaining</div>
+                    </div>
+                </div>
+                <div class="input-group row ml-0">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                        <input id="snippet-paragraph" class='mx-2' type="checkbox" aria-label="Checkbox for following text input">
+                        </div>
+                    </div>
+                    <textarea id="snippet-text-demo" class="form-control board-entry-text" rows="3" disabled></textarea>
+                </div>
+                <div class="d-flex flex-row justify-content-around">
+                    <div id="segment-req" class="d-flex flex-row justify-content-center bg-white border border-dark rounded text-dark">
+                        <div class="d-flex mx-1 flex-row segment-req-list-col text-left">
+                            <img id="sc-char-status" src="../images/square-outline-black.svg">
+                            <div>Character</div>
+                            <img id="sc-adj-status" src="../images/square-outline-black.svg">
+                            <div>Adjective</div>
+                            <img id="sc-verb-status" src="../images/square-outline-black.svg">
+                            <div>Verb</div>
+                        </div>
+                    </div>
+                    <div id="countdown" class="text-center" style="display:none;">
+                        <div id="coundown-div" class="text-center">
+                            {{!-- placeholder for seconds rem block --}}
+                            <span id="countdown-sec"></span><span id="countdown-text"> seconds left</span>
+                        </div>
+                    </div>
+                </div><!--requirements and countdown-->
+            </div> <!--game tab content-->
+            <div id="tab-story" class="container tab-pane game-tab-border fade border border-dark">
+                <div id="rollingStory" class="story-tab">
+                    <p>Detraxit consetetur usu in, at illum munere appetere mea. Mel utroque minimum fastidii eu, mel ei odio sententiae. Ex dicta docendi consectetuer per. In altera aliquid interpretaris vix, id simul lucilius evertitur per, civibus vituperatoribus usu te. Est modo iudicabit ne.</p>
+                    <p>Iracundia ullamcorper cum ut, viris dolorem ad qui. Vix agam eirmod urbanitas ne, deleniti consulatu inciderint qui ex! Appetere nominati electram id quo, in mei copiosae indoctum, ius regione tamquam fuisset ei! Invenire scriptorem ut usu, sit aeterno menandri delicatissimi at, populo scripta scribentur nam in. Quot constituto sit at!</p>   
+                    <p>Ut usu velit corpora, his altera aperiam mediocrem ei, eu vix mundi feugiat minimum? Nam ne fugit sapientem, in pro quem voluptua officiis. His latine lucilius ex, ei pro saperet tacimates. Sed aliquip repudiare ne, te quando oratio putent sit, duo aliquid accumsan id!</p>
+                </div>
+            </div><!--story tab content-->
+            <div id="tab-vote" class="container tab-pane game-tab-border fade border border-dark">
+            </div>
+        </div><!--tabs container-->
+        <div class="progress">
+            <div class="progress-bar round-progress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="d-flex flex-row justify-content-between m-2 border-top border-light">
+            <button class='btn btn-success px-5 mt-1'>Ready to lock it in?</button>
+            <button class='btn btn-danger px-5 mt-1'>Exit Game</button>
+        </div>
+    </div> <!--game holder-->
+</div> <!--demo   col-md-6-->

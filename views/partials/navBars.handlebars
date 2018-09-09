@@ -1,0 +1,116 @@
+
+<nav class="sideBar"><!--sidebar-->
+    <div id="dismiss">
+      <i class="fas fa-arrow-circle-left"></i>   
+    </div>
+    <div class="navbar-brand ml-3 mt-3">
+      <a href={{#if loggedIn}}{{#if inGame}}"#"{{else}}"/welcome"{{/if}}{{else}}"/"{{/if}}>Short Story Craft</a>
+    </div>
+
+  {{#unless loggedIn}}
+    <button type="button" class="btn btn-outline-light ml-5 px-1" data-toggle="modal" data-target="#login-modal">
+        Log in
+    </button>      
+      get creative!
+  {{else}}
+    {{#unless inGame}}
+    <button type="button" class="btn btn-outline-light px-5 ml-3" >
+        Start a new story
+    </button>  
+    {{/unless}}
+  {{/unless}}
+    <ul class="list-unstyled components">
+  {{#if inGame}}
+    <li><a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Story going flat?</a>
+      <ul class="collapse list-unstyled" id="homeSubmenu">
+        <li><a class="exit-game" href="#">Exit Game</a></li>
+        <li><a href="#">Back to Lobby</a></li>
+        <li><a href="#">Create New Story</a></li>
+      </ul>
+    </li>
+  {{else}}
+    <li><a class="active" href="#">Browse Previous Stories</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact Us</a></li>
+  {{/if}}
+  </ul>
+</nav><!--sidebar-->
+
+<div id="topnav" class="d-flex flex-sm-row justify-content-between m-3">
+  <div>
+    <a href="#" id="showSideBar" class="btn btn-light btn-outline-light">Menu</a>
+  </div>
+  <div class="navbar-brand pt-0">
+    <a class="text-light" href=
+      {{#if loggedIn}}
+        {{#if inGame}}"#"{{else}}"/welcome"{{/if}}
+      {{else}}
+        "/"
+      {{/if}}>
+      <span class="d-none d-sm-block">Short Story Craft</span>
+      <span class="d-block d-sm-none">SSC</span>
+      </a>
+  </div>
+  <div>
+    <a class="btn btn-outline-light"
+{{#if loggedIn}}
+  {{#if inGame}}
+        class="exit-game">Exit Game
+      </a>
+    </div>
+  </div>
+  {{else}}
+      href="/logout" id="logOff">Log Off
+      </a>
+    </div>
+  </div>
+  {{/if}}
+{{else}}
+      data-toggle="modal" data-target="#login-modal">Log In
+      </a>
+    </div>
+  </div>
+
+
+<div class="modal fade text-dark px-0" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container px-0">
+          <div class="nav d-flex flex-row ml-3">
+              <a class="active" data-toggle="tab" href="#tab-signin">Sign in </a>
+              <div class="mx-2"> or</div>
+              <a data-toggle="tab" href="#tab-signup">Sign up</a>
+              <div class="ml-1">for a free account</div>
+            <div class="ml-auto">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+          <div class="tab-content mt-3">
+            <div id="tab-signin" class="container tab-pane px-0 active">
+              {{> signin this}}
+            </div>
+            <div ng-app="myapp" id="tab-signup" class="container px-0 tab-pane">
+              {{> signup}}
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade text-dark" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signup-modal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="../js/login.js"></script>
+{{#if wasLoggedOut}}<div id="successful-signout"></div>{{/if}}
+{{/if}}

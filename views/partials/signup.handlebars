@@ -1,0 +1,73 @@
+
+        <form ng-controller="PasswordController" class="needs-validation form-signin" id="signup" name="signup" method="post" action="/signup" novalidate>
+          <div class="form-row">
+            <div class="col-sm-6">
+              <div class="form-label-group">
+                <input id="firstname" name="firstname" type="text" class="form-control" placeholder="First Name" required/>
+                <label for="firstname">First Name</label> 
+                <div class="invalid-feedback">
+                  Please input first name
+                </div>  
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-label-group">
+                <input id="lastname" name="lastname" type="text" class="form-control" placeholder="Last Name" required/>
+                <label for="lastname">Last Name</label> 
+                <div class="invalid-feedback">
+                  Please input last name
+                </div>  
+              </div>
+            </div>
+          </div>
+          <div id="disp-group" class="form-label-group">
+            <input id="displayname" name="displayname" type="text" class="form-control" placeholder="Display Name" required/>
+            <label for="displayname">Display Name</label> 
+            <div id="disp-feedback" class="invalid-feedback">
+              Please choose a display name.
+            </div>
+          </div>
+          <div id="email-group" class="form-label-group">
+            <input id="signup-email"  name="signup-email" type="email" class="form-control" placeholder="Email Address" required/>
+            <label for="signup-email">Email Address</label>
+            <div class="invalid-feedback">
+              Please provide a valid email
+            </div>
+          </div>
+          <div class="form-row mb-0 pb-0">
+            <div class="col-sm-6 mb-0 pb-0">
+              <div class="form-label-group" >
+                <input id="signup-password" name="signup-password" type="password" class="form-control" ng-model="password" ng-change="analyze(password)" placeholder="Password" required/>
+                <label for="signup-password">Password</label>
+                <a  href="#" class="available strength btn btn-sn p-1" ng-style="pwStr" readonly id="pw-strength" data-toggle="popover" data-placement="top"
+                 data-content="Must  be 8-20 characters in length &amp; contain some combination of UPPER, lower, &amp; $pecial &#65504;haracters">
+                  <span >{[{strength}]}</span>
+                </a>
+                <div class="invalid-feedback">
+                  Please provide a password
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-label-group">
+                <input id="password-confirm" name="password-confirm" type="password" class="form-control" placeholder="Confirm Password" required/>
+                <label for="password-confirm">Confirm Password</label>
+                <div class="invalid-feedback">
+                Passwords don't match
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                I understand this site uses cookies to anonymously track usage and agree with the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Sign up</button>
+        </form>
